@@ -2,6 +2,9 @@
 
 本目錄收錄 TBOJ 的學習教材。**所有教材在納入前，都必須通過 [`../docs/DESIGN_PRINCIPLES.md`](../docs/DESIGN_PRINCIPLES.md) 的審稿檢查清單**（尤其是腓立比書 4:8 的內容標準）。
 
+> 🛠️ **要新增主題？** 請用教材編寫 skill：[`.claude/skills/tboj-curriculum/SKILL.md`](../.claude/skills/tboj-curriculum/SKILL.md)。
+> 它把兩軌哲學、四檔結構、模板與提交規範都標準化了，任何 Agent（含 subagent）都能照著產出。
+
 ## 兩套版本的設計哲學
 
 每個主題會發展出**兩種版本**，服務兩種不同的教育者：
@@ -26,14 +29,19 @@ content/
     │   ├── v1-teacher-guide.md    # 第一版教師指引（含 45 分鐘時間配置）
     │   ├── v2-future.md           # 第二版教材
     │   └── v2-teacher-guide.md    # 第二版教師指引（不排時間、不設標準答案）
-    └── who-am-i/                 # 主題：我是誰（偏「自我認同」）
+    ├── who-am-i/                 # 主題：我是誰（偏「自我認同」）
+    │   ├── v1-traditional.md      # 第一版教材
+    │   ├── v1-teacher-guide.md    # 第一版教師指引（含 45 分鐘時間配置）
+    │   ├── v2-future.md           # 第二版教材
+    │   └── v2-teacher-guide.md    # 第二版教師指引（不排時間、不設標準答案）
+    └── money-and-value/         # 主題：錢可以買到什麼（理財 + 看顧他人）
         ├── v1-traditional.md      # 第一版教材
         ├── v1-teacher-guide.md    # 第一版教師指引（含 45 分鐘時間配置）
         ├── v2-future.md           # 第二版教材
         └── v2-teacher-guide.md    # 第二版教師指引（不排時間、不設標準答案）
 ```
 
-> 兩個示範主題分別示範計畫的兩大品格目標：水的旅行偏「同理心」，我是誰偏「自我認同」。
+> 三個示範主題示範計畫精神的不同切面：水的旅行偏「同理心」，我是誰偏「自我認同」，錢可以買到什麼偏「看顧最小的」。
 
 每個主題包含**教材**（給孩子用）與**教師指引**（給陪伴者用）：
 
@@ -44,3 +52,4 @@ content/
 
 - 水的旅行：[第一版教材](samples/water-cycle/v1-traditional.md) ｜ [第一版指引](samples/water-cycle/v1-teacher-guide.md) ｜ [第二版教材](samples/water-cycle/v2-future.md) ｜ [第二版指引](samples/water-cycle/v2-teacher-guide.md)
 - 我是誰：[第一版教材](samples/who-am-i/v1-traditional.md) ｜ [第一版指引](samples/who-am-i/v1-teacher-guide.md) ｜ [第二版教材](samples/who-am-i/v2-future.md) ｜ [第二版指引](samples/who-am-i/v2-teacher-guide.md)
+- 錢可以買到什麼：[第一版教材](samples/money-and-value/v1-traditional.md) ｜ [第一版指引](samples/money-and-value/v1-teacher-guide.md) ｜ [第二版教材](samples/money-and-value/v2-future.md) ｜ [第二版指引](samples/money-and-value/v2-teacher-guide.md)
