@@ -21,12 +21,19 @@
 ```
 content/
 └── samples/
-    └── water-cycle/              # 示範主題：水的旅行
+    ├── water-cycle/              # 主題：水的旅行（偏「同理心」）
+    │   ├── v1-traditional.md      # 第一版教材
+    │   ├── v1-teacher-guide.md    # 第一版教師指引（含 45 分鐘時間配置）
+    │   ├── v2-future.md           # 第二版教材
+    │   └── v2-teacher-guide.md    # 第二版教師指引（不排時間、不設標準答案）
+    └── who-am-i/                 # 主題：我是誰（偏「自我認同」）
         ├── v1-traditional.md      # 第一版教材
         ├── v1-teacher-guide.md    # 第一版教師指引（含 45 分鐘時間配置）
         ├── v2-future.md           # 第二版教材
         └── v2-teacher-guide.md    # 第二版教師指引（不排時間、不設標準答案）
 ```
+
+> 兩個示範主題分別示範計畫的兩大品格目標：水的旅行偏「同理心」，我是誰偏「自我認同」。
 
 每個主題包含**教材**（給孩子用）與**教師指引**（給陪伴者用）：
 
@@ -35,5 +42,5 @@ content/
 
 ## 範例
 
-- [水的旅行 · 第一版教材](samples/water-cycle/v1-traditional.md) ｜ [第一版教師指引](samples/water-cycle/v1-teacher-guide.md)
-- [水的旅行 · 第二版教材](samples/water-cycle/v2-future.md) ｜ [第二版教師指引](samples/water-cycle/v2-teacher-guide.md)
+- 水的旅行：[第一版教材](samples/water-cycle/v1-traditional.md) ｜ [第一版指引](samples/water-cycle/v1-teacher-guide.md) ｜ [第二版教材](samples/water-cycle/v2-future.md) ｜ [第二版指引](samples/water-cycle/v2-teacher-guide.md)
+- 我是誰：[第一版教材](samples/who-am-i/v1-traditional.md) ｜ [第一版指引](samples/who-am-i/v1-teacher-guide.md) ｜ [第二版教材](samples/who-am-i/v2-future.md) ｜ [第二版指引](samples/who-am-i/v2-teacher-guide.md)
