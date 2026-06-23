@@ -28,5 +28,10 @@ jobs:
           fi
           chmod +x scripts/notify_discord.sh
           TITLE="TBOJ dev 階段更新"
-          SUMMARY="$(git log -1 --pretty=format:'%s%n%n%b')"
+          # 中文簡述取自 commit 訊息中的 "DC-zh:" trailer（可多行）。
+          # commit 本體維持英文即可；DC 推播一律用中文。
+          SUMMARY="$(git log -1 --pretty=format:'%b' | sed -n 's/^DC-zh:[[:space:]]*//p')"
+          if [ -z "$SUMMARY" ]; then
+            SUMMARY="本次有更新推送到 dev 分支，詳細變更請見下方 commit 紀錄。"
+          fi
           ./scripts/notify_discord.sh "$TITLE" "$SUMMARY"

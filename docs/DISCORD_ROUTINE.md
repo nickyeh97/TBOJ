@@ -6,9 +6,26 @@
 ## 運作方式
 
 每次 push 到 `dev` 分支，GitHub Actions（`.github/workflows/discord-notify.yml`）會自動：
-1. 取出最近的 commit 訊息作為「本次主要內容」。
+1. 從最新 commit 的 `DC-zh:` trailer 取出**中文簡述**作為「本次主要內容」。
 2. 由 `scripts/notify_discord.sh` 組成 Discord embed（含 commit 更新重點）。
 3. 送到 Webhook。
+
+> **語言慣例**：commit 訊息本體用英文，Discord 推播的簡述一律用中文。
+
+## 如何寫中文簡述（DC-zh trailer）
+
+在 commit 訊息**最後**加上一行（或多行）以 `DC-zh:` 開頭的中文：
+
+```
+content: add teacher guides for both curriculum versions
+
+...英文說明...
+
+DC-zh: 新增水的旅行兩版教師指引：第一版含時間配置，第二版強調不設標準答案。
+```
+
+- 可以有多行 `DC-zh:`，會一起被當成簡述。
+- 若該 commit 沒有 `DC-zh:`，推播會用預設中文句（「本次有更新推送到 dev……」）。
 
 ## 一次性設定（你需要做的）
 
