@@ -21,12 +21,19 @@
 ```
 content/
 └── samples/
-    └── water-cycle/          # 示範主題：水的旅行
-        ├── v1-traditional.md  # 第一版
-        └── v2-future.md       # 第二版
+    └── water-cycle/              # 示範主題：水的旅行
+        ├── v1-traditional.md      # 第一版教材
+        ├── v1-teacher-guide.md    # 第一版教師指引（含 45 分鐘時間配置）
+        ├── v2-future.md           # 第二版教材
+        └── v2-teacher-guide.md    # 第二版教師指引（不排時間、不設標準答案）
 ```
+
+每個主題包含**教材**（給孩子用）與**教師指引**（給陪伴者用）：
+
+- 第一版教師指引含時間配置表，適合需要明確流程的課堂。
+- 第二版教師指引刻意不排時間，並反覆提醒陪伴者：**不要限制孩子的想像力、不要給標準答案**。
 
 ## 範例
 
-- [水的旅行 · 第一版](samples/water-cycle/v1-traditional.md)
-- [水的旅行 · 第二版](samples/water-cycle/v2-future.md)
+- [水的旅行 · 第一版教材](samples/water-cycle/v1-traditional.md) ｜ [第一版教師指引](samples/water-cycle/v1-teacher-guide.md)
+- [水的旅行 · 第二版教材](samples/water-cycle/v2-future.md) ｜ [第二版教師指引](samples/water-cycle/v2-teacher-guide.md)
