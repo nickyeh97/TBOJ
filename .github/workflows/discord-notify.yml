@@ -1,0 +1,32 @@
+name: Discord Notify
+
+# Routine：每次 push 到 dev，就把本次 commit 重點自動發到 Discord。
+# Webhook 以 GitHub Secret 提供（名稱：DISCORD_WEBHOOK_URL），不寫入 repo。
+# CI 環境的網路不受本地遠端環境的 egress 白名單限制，故可正常送達。
+
+on:
+  push:
+    branches: [dev]
+  workflow_dispatch:        # 也允許手動觸發
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 20   # 讓 notify 腳本能取到最近數筆 commit
+
+      - name: Send Discord notification
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          if [ -z "$DISCORD_WEBHOOK_URL" ]; then
+            echo "::warning::尚未設定 DISCORD_WEBHOOK_URL secret，略過通知。"
+            exit 0
+          fi
+          chmod +x scripts/notify_discord.sh
+          TITLE="TBOJ dev 階段更新"
+          SUMMARY="$(git log -1 --pretty=format:'%s%n%n%b')"
+          ./scripts/notify_discord.sh "$TITLE" "$SUMMARY"
